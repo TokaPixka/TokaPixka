@@ -3,59 +3,51 @@
     ViewBag.Title = "Index";
 }
 
-@*<h2>Mi cosecha</h2>*@
 
 
-<div class="container">
+@*<ul>
+        @foreach (var current in ViewBag.ListLect)
+        {
+            <li>@current.Id</li>
+            <li>@current.Valor</li>
+            <li>@current.EstatusText</li>
+            <li>@current.TimestampLectura</li>
+            <li>@current.EstatusMod</li>
+            <li>@current.Especie</li>
+            <li>@current.Ruta</li>
+        }
+    </ul>*@
 
-    <div align="center" class="row-fluid">
-        <div id="container">
-            <!-- <img src="static/img/me_100px.png" alt="..." class="img-circle"> -->
-            <a href="https://es.wikipedia.org/wiki/Apium">
-                <img src="~/img/Apio/4.png" alt="..." @*class="img-circle"*@>
-            </a>
-            <h4>Apio</h4>
 
-            <a class="btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/">
-                <span class="fa fa-twitter"></span>
-            </a>
-            <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com/">
-                <span class="fa fa-facebook"></span>
-            </a>
-            <a class="btn btn-social-icon btn-lg btn-google" href="https://plus.google.com">
-                <span class="fa fa-google"></span>
-            </a>
-            <br /><small>Comparte con tus amigos</small>
-            <p class="lead text-success">
-                <em class="small">"Estoy bien, gracias por cuidarme."</em>
-            </p>
+
+@{
+    foreach (var current in ViewBag.ListLect)
+    {
+        <div class="container">
+            <!--Apio-->
+            <div align="center" class="row-fluid">
+                <div id="container">
+                    <a href="https://es.wikipedia.org/wiki/Apium">
+                        <img src="~/img/@(@current.Especie)/@(current.Ruta)" alt="...">
+                    </a>
+                    <h4>@current.Especie</h4>
+                    <a class="btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                    
+                    <a class="btn btn-social-icon btn-lg btn-facebook" href="http://www.facebook.com/sharer.php?u=http://localhost:56627/">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a class="btn btn-social-icon btn-lg btn-google" href="https://plus.google.com">
+                        <span class="fa fa-google"></span>
+                    </a>
+                    <br /><small>Comparte con tus amigos</small>
+                    <p class="lead text-success">
+                        <em class="small">@current.EstatusMod</em>
+                    </p>
+                </div>
+            </div>         
         </div>
-    </div>
-
-    <div align="center" class="row-fluid">
-        <div id="container">
-            <!-- <img src="static/img/me_100px.png" alt="..." class="img-circle"> -->
-            <a href="https://es.wikipedia.org/wiki/Beta_vulgaris">
-                <img src="~/img/Betabel/3.png" alt="..." @*class="img-circle"*@>
-            </a>
-            <h4>Betabel</h4>
-
-            <a class="btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/">
-                <span class="fa fa-twitter"></span>
-            </a>
-            <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com/">
-                <span class="fa fa-facebook"></span>
-            </a>
-            <a class="btn btn-social-icon btn-lg btn-google" href="https://plus.google.com">
-                <span class="fa fa-google"></span>
-            </a>
-            <br /><small>Comparte con tus amigos</small>
-    <p class="lead text-warning">
-        <em class="small">"Un poco de agua, ¡por favor!"</em>
-    </p>
-</div>
-    </div>
-
-
-</div>
+    }
+}
 

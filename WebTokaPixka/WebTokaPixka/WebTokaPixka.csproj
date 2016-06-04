@@ -230,6 +230,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="_Data\DataBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\._404.html" />
